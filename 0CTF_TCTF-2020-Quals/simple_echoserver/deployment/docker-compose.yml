@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+    pwn:
+        build: ./
+        volumes: 
+            - ./share:/home/pwn:ro
+            - ./xinetd:/etc/xinetd.d/xinetd:ro
+            - ./tmp:/tmp:rw
+        ports:
+            - "12020:8888"
+        pids_limit: 1024
+        #cpus: 0.5
+        restart: unless-stopped
+
