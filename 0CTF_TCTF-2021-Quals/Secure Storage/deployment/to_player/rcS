@@ -1,0 +1,14 @@
+#!/bin/sh
+
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mkdir /dev/pts
+mount -t devpts devpts /dev/pts
+
+insmod /challenge/ss.ko
+chgrp 900 /dev/ss
+chmod 660 /dev/ss 
+
+echo "0 0 0 0" > /proc/sys/kernel/printk
+

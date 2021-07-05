@@ -1,0 +1,25 @@
+services:
+    pwn:
+        build: ./
+        image: secure_storage
+        container_name: secure_storage_pwn_1
+        #tty: true
+        #command: ["/usr/sbin/xinetd", "-dontfork", "-d"]
+        volumes:
+            - ./share:/home/pwn:ro
+            - ./pwn-xinetd:/etc/xinetd.d/pwn-xinetd:ro
+            - ./tmp:/tmp:rw
+        ports:
+            - "12021:8888"    # 
+        pids_limit: 1024
+        restart: unless-stopped
+        deploy:
+            resources:
+                limits:
+                    cpus: '6.00'
+                    memory: 16G
+
+#networks:
+#    default:
+#        external: true
+#        name: pwn

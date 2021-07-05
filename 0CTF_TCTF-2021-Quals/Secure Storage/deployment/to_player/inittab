@@ -1,0 +1,6 @@
+::sysinit:/etc/init.d/rcS
+ttyS0::respawn:/usr/bin/setuidgid 1000 /bin/sh
+::ctrlaltdel:/sbin/reboot
+::shutdown:/sbin/swapoff -a
+::shutdown:/bin/umount -a -r
+::restart:/sbin/init
