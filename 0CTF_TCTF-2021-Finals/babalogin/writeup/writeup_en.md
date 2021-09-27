@@ -125,9 +125,9 @@ This will pass the first two bootstraps (at 0xAA26 and 0xAA65) and finally run y
 
 ## Reference
 
-[Reflections on Trusting Trust](https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf)
-[如何评价 Ken Thompson 在 C 编译器里植入了后门这件事？](https://www.zhihu.com/question/26866999/answer/34335540): my inspiration for this challenge is from here
-[给开源编译器插入后门](https://ring0.me/2014/11/insert-backdoor-into-compiler/)
+- [Reflections on Trusting Trust](https://www.cs.cmu.edu/~rdriley/487/papers/Thompson_1984_ReflectionsonTrustingTrust.pdf)  
+- [如何评价 Ken Thompson 在 C 编译器里植入了后门这件事？](https://www.zhihu.com/question/26866999/answer/34335540): my inspiration for this challenge is from here  
+- [给开源编译器插入后门](https://ring0.me/2014/11/insert-backdoor-into-compiler/)  
 
 ## Acknowledgment
 
