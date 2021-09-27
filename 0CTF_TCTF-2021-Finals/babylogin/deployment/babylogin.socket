@@ -1,0 +1,8 @@
+[Socket]
+ListenStream=22021
+Accept=yes
+MaxConnections=10000
+MaxConnectionsPerSource=100
+
+[Install]
+WantedBy=sockets.target

