@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+    pwn:
+        image: interweave:latest
+        build: ./
+        expose:
+            - "8888"
+        ports:
+            - "8888:8888"
+        deploy:
+            resources:
+                limits:
+                    cpus: '0.50'
+                    memory: 50M
+                    # pids: '1024'
